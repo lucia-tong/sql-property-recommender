@@ -23,8 +23,13 @@ Sistema de recomendación de alojamientos usando SQL y Python. A partir de los r
 ## estructura
 
 ```
-sql-property-recommender/
-├── sql_property_recommender.ipynb   # creación de BD, queries y resultado final
+sql-rental-analysis/
+├── data/
+│   ├── ALOJAMIENTO.csv
+│   ├── UBICACION.csv
+│   ├── PRECIO.csv
+│   └── PUNTUACION.csv
+├── sql_queries_analysis.ipynb       # Notebook
 └── README.md
 ```
 
