@@ -1,26 +1,26 @@
 # SQL Property Recommender
 
-Sistema de recomendación de alojamientos usando SQL y Python. A partir de los requisitos de un cliente real, se construye una base de datos relacional y se ejecutan queries progresivas hasta encontrar las propiedades que cumplen todos los filtros. Proyecto del Máster en Data & AI — Nuclio Digital School.
+An accommodation recommendation system built with SQL and Python. Based on real-world client requirements, this project involves constructing a relational database and executing progressive queries to identify properties that meet a specific set of complex filters.
+Developed as part of the Master’s in Data & AI — Nuclio Digital School.
 
-## qué hace
+## Key Features  
 
-* convierte archivos Excel a CSV y los carga en una base de datos MySQL
-* crea 4 tablas relacionales: alojamiento, ubicación, precio y puntuación
-* construye queries individuales para cada requisito del cliente
-* combina todos los filtros en una única query final con JOINs
-* devuelve las propiedades que cumplen todas las condiciones simultáneamente
+* ETL Process: Converts Excel source files to CSV and loads them into a MySQL database.
+* Relational Schema: Creates and manages 4 interconnected tables: Accommodation, Location, Price, and Rating.
+* Modular Queries: Develops individual SQL queries for each specific client requirement.
+* Advanced Filtering: Combines all constraints into a final query using complex JOINs to return only the properties that satisfy all conditions simultaneously.
 
-## requisitos del cliente que se modelan
+## Client Requirements
 
-* terraza y aire acondicionado, sin piscina
-* no estudios sin salón, mínimo 2 baños
-* superficie mínima de 80m²
-* a más de 1 km del metro y 2 km del centro (cliente sensible al ruido)
-* precio entre 1.500€ y 2.000€ la noche
-* porcentaje de reserva exactamente del 25%
-* puntuación del alojamiento > 4.5 y de la agencia > 4 puntos
+* Amenities: Must have a terrace and air conditioning; must not have a pool.
+* Layout: No studios (must have a separate living room); minimum of 2 bathrooms.
+* Size: Minimum surface area of 80m².
+* Location: Noise-sensitive client — property must be more than 1 km from the metro and 2 km from the city center.
+* Budget: Price per night between €1,500 and €2,000.
+* Booking Metric: Reservation percentage must be exactly 25%.
+* Ratings: Accommodation score > 4.5 and agency score > 4.
 
-## estructura
+## Project Structure
 
 ```
 sql-rental-analysis/
@@ -33,15 +33,15 @@ sql-rental-analysis/
 └── README.md
 ```
 
-## cómo ejecutarlo
+## Installation & Usage
 
 ```bash
 pip install sqlalchemy mysql-connector-python pandas openpyxl jupyter
 jupyter notebook sql_property_recommender.ipynb
 ```
 
-necesitas MySQL corriendo en local. actualiza la cadena de conexión en la primera celda con tus credenciales.
+Note: A local MySQL instance is required. Update the connection string in the first cell of the notebook with your local credentials.
 
-## stack
+## Tech Stack
 
 python · pandas · sqlalchemy · mysql · openpyxl · jupyter
